@@ -1,0 +1,21 @@
+<!-- news/templates/news/news_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News List</title>
+</head>
+<body>
+    <h1>Latest News</h1>
+    <ul>
+        {% for article in news_articles %}
+        <li>
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.content }}</p>
+            <img src="{{ article.image_url }}" alt="{{ article.title }}">
+            <p>Published on: {{ article.publication_date }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
